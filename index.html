@@ -1,0 +1,60 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#fff1fa"><title>Pricoletta | プリコレッタ アイテム編集追加 v2.9</title>
+<link rel="manifest" href="./app.webmanifest">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="./styles/01-base.css">
+<link rel="stylesheet" href="./styles/transfer.css">
+<script defer src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script><script defer src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<link rel="stylesheet" href="./styles/02-registration-candidates.css">
+
+<link id="pc-registration-refinements" rel="stylesheet" href="./styles/03-pc-registration-refinements.css">
+<link rel="stylesheet" href="./styles/04-detail-registration.css"><link id="pc-dressup-layout-20261105" rel="stylesheet" href="./styles/05-pc-dressup-layout-20261105.css"><link id="du-bg-viewport-fix" rel="stylesheet" href="./styles/06-du-bg-viewport-fix.css">
+<link id="pricoletta-background-contain-fix" rel="stylesheet" href="./styles/07-pricoletta-background-contain-fix.css">
+
+<link id="du-bg-natural-fit-v2" rel="stylesheet" href="./styles/08-du-bg-natural-fit-v2.css">
+<link id="pc-quick-style" rel="stylesheet" href="./styles/09-pc-quick-style.css"><link id="pc-quick-improvements" rel="stylesheet" href="./styles/10-pc-quick-improvements.css"><link id="pc-quick-v3-style" rel="stylesheet" href="./styles/11-pc-quick-v3-style.css"><link id="pc-registration-navigation-v4" rel="stylesheet" href="./styles/12-pc-registration-navigation-v4.css"><link id="pc-repair-20261108" rel="stylesheet" href="./styles/13-pc-repair-20261108.css"><link id="pc-quick-layout-A-final" rel="stylesheet" href="./styles/14-pc-quick-layout-A-final.css"><link id="pi-search-filter-patch" rel="stylesheet" href="./styles/15-pi-search-filter-patch.css"><link rel="stylesheet" href="./styles/16-detail-layout.css"><link rel="stylesheet" href="./styles/17-detail-inline-editor.css"><link id="pc-approved-accordion-filter" rel="stylesheet" href="./styles/18-pc-approved-accordion-filter.css"><link id="pc-detail-layout-v3" rel="stylesheet" href="./styles/19-pc-detail-layout-v3.css"></style><link id="pc-book-styles" rel="stylesheet" href="./styles/20-pc-book-styles.css"><link id="pc-book-filter-v2" rel="stylesheet" href="./styles/21-pc-book-filter-v2.css"><link id="pc-book-tags-v3" rel="stylesheet" href="./styles/22-pc-book-tags-v3.css"><link id="pc-book-render-fix" rel="stylesheet" href="./styles/23-pc-book-render-fix.css"><link id="pc-book-detail-compact-v4" rel="stylesheet" href="./styles/24-pc-book-detail-compact-v4.css"><link id="pc-book-manage-sort-style" rel="stylesheet" href="./styles/25-pc-book-manage-sort-style.css"><link id="pc-book-picker-style" rel="stylesheet" href="./styles/26-pc-book-picker-style.css"><link id="pc-sort-pill-overlay-v2" rel="stylesheet" href="./styles/27-pc-sort-pill-overlay-v2.css"><link id="pc-cardnumber-style" rel="stylesheet" href="./styles/28-pc-cardnumber-style.css"><link id="pc-cardnumber-hyphen-style" rel="stylesheet" href="./styles/29-pc-cardnumber-hyphen-style.css"><link id="pc-ref-flow-css" rel="stylesheet" href="./styles/30-pc-ref-flow-css.css"><link id="pd-image-tap-edit-style" rel="stylesheet" href="./styles/31-pd-image-tap-edit-style.css"><link id="pd-common-image-actions" rel="stylesheet" href="./styles/32-pd-common-image-actions.css"><link id="pd-item-image-edit-css" rel="stylesheet" href="./styles/33-pd-item-image-edit-css.css"><link id="pc-soft-image-delete-v2" rel="stylesheet" href="./styles/34-pc-soft-image-delete-v2.css"><link id="pc-list-compact-sort-20261110" rel="stylesheet" href="./styles/35-pc-list-compact-sort-20261110.css">
+<link id="pc-item-shared-folder-spacing-fix-20261110" rel="stylesheet" href="./styles/36-pc-item-shared-folder-spacing-fix-20261110.css">
+
+<link id="pc-compact-search-summary-20261111" rel="stylesheet" href="./styles/37-pc-compact-search-summary-20261111.css">
+<link id="pc-editor-bottom-styles" rel="stylesheet" href="./styles/38-pc-editor-bottom-styles.css">
+<link id="pc-bg-compact-v3" rel="stylesheet" href="./styles/39-pc-bg-compact-v3.css">
+<link rel="stylesheet" href="./styles/40-drag-feedback.css">
+<link rel="stylesheet" href="./styles/41-drag-targets.css">
+<link id="pc-longpress-scroll-fix" rel="stylesheet" href="./styles/42-pc-longpress-scroll-fix.css">
+<link rel="stylesheet" href="./styles/unified-registration.css">
+<link rel="stylesheet" href="./styles/tag-selection.css">
+<link rel="stylesheet" href="./styles/series-management.css">
+</head>
+<body><div class="app"><section id="title-screen" class="screen title-screen"><div class="title-content"><div style="color:#e8a1c9">✦ ♡ ✦</div><div class="logo">Pricoletta</div><div class="logo-sub">プリコレッタ</div><div class="notice"><h1>♡ おねがい！ ♡</h1><p class="notice-main">QRコードが写った画像は、SNSやインターネットに公開しないでね。</p><p class="notice-small">本アプリではコーデやアイテムの画像と一緒にQRコードを管理できます。スクリーンショットを共有するときはQRが写らないよう注意してね。</p><p class="notice-small emphasis">QR画像は端末に保存されます。引き継ぎを設定すると、使用中のアカウントにも保存されます。</p></div><button class="game-button" id="start-button">はじめる →</button></div></section><section id="main-screen" class="screen main-screen hidden"><header class="topbar"><span class="mini-logo">♡ Pricoletta</span><span id="page-heading">ホーム</span></header><main class="page-scroll" id="page-content"></main><nav class="bottom-nav"><button data-page="home" class="nav-button active"><span class="nav-icon">⌂</span>ホーム</button><button data-page="items" class="nav-button"><span class="nav-icon">▦</span>コーデ<br>アイテム</button><button data-page="register" class="nav-button"><span class="nav-icon">＋</span>アイテム<br>を登録</button><button data-page="dressup" class="nav-button"><span class="nav-icon">♧</span>きせかえ</button><button data-page="extra" class="nav-button"><span class="nav-icon">⋯</span>メニュー</button></nav></section></div>
+<script src="./app.js"></script>
+<script src="./data/transfer-storage.js"></script>
+<script src="./data/storage-keys.js"></script>
+<script src="./pages/registration-state.js"></script>
+<script src="./pages/destinations.js"></script>
+<script src="./components/registration-ui.js"></script>
+<script src="./data/image-storage.js"></script>
+<script src="./pages/navigation.js"></script>
+<script src="./components/qr-viewer.js"></script>
+<script src="./pages/book.js"></script>
+<script src="./pages/transfer.js"></script>
+<script src="./pages/collection.js"></script>
+<script src="./pages/coordinate-detail.js"></script>
+<script src="./pages/item-editor.js"></script>
+<script src="./pages/registration.js"></script>
+<script src="./pages/dress-up.js"></script>
+<script src="./pages/collection-filters.js"></script>
+<script src="./pages/navigation-events.js"></script>
+<script src="./pages/editor-events.js"></script>
+<script src="./pages/unified-registration.js"></script>
+<script src="./pages/series-management.js"></script>
+<script src="./components/tag-selection.js"></script>
+<script src="./components/tag-manager.js"></script>
+<script id="pricoletta-scroll-stability" src="./components/scroll-stability.js"></script>
+<script id="pc-cardnumber-hyphen-script" src="./components/card-number-input.js"></script><link id="pc-tags-sort-v2-style" rel="stylesheet" href="./styles/43-pc-tags-sort-v2-style.css">
+
+<link id="pc-natural-drag-v1" rel="stylesheet" href="./styles/44-pc-natural-drag-v1.css">
+<link rel="stylesheet" href="./styles/dress-up-controls.css">
+<link rel="stylesheet" href="./styles/qr-viewer.css">
+<link rel="stylesheet" href="./styles/my-collection.css">
+<script src="./pages/my-collection.js"></script>
+</body></html>
